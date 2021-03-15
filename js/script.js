@@ -11,20 +11,6 @@
 function randomNum() {
   var min = 1;
   var max = (100 - min) + 1;
-  var rNum = [];
-  var temp;
-  for (var x = 0; i < 16; x++) {
-    temp = Math.floor(Math.random() * max) + 1;
-    for (var i = 0; i < rNum.length; i++) {
-      while (temp == rNum[i]) {
-        temp = Math.floor(Math.random() * max) + 1;
-      }
-    rNum.push(temp);
-    }
-  }
+  var rNum = Math.floor(Math.random()* max) + 1;
   return rNum;
 }
-
-
-var arrRnd = randomNum();
-console.log(arrRnd);
