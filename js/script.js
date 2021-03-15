@@ -16,7 +16,7 @@ function randomNum() {
   for (var x = 0; i < 16; x++) {
     temp = Math.floor(Math.random() * max) + 1;
     for (var i = 0; i < rNum.length; i++) {
-      if (temp == rNum[i]) {
+      while (temp == rNum[i]) {
         temp = Math.floor(Math.random() * max) + 1;
       }
     rNum.push(temp);
