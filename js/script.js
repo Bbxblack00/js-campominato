@@ -6,7 +6,7 @@
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
-// function zone
+// zona funzioni
 
 function randomNum() {
   var min = 1;
@@ -14,3 +14,30 @@ function randomNum() {
   var rNum = Math.floor(Math.random()* max) + 1;
   return rNum;
 }
+
+function comparison(arr, num) {
+  for (var i = 0; i < arr.length; i++) {
+    while (arr[i] == num) {
+      num = randomNum();
+    }
+  }
+  return num;
+}
+
+// zona variabili
+
+var minefield = [];
+var temp;
+
+
+
+
+// zona calcoli principali
+
+for (var i = 0; i < 16; i++) {
+  temp = randomNum();
+  mine = comparison(minefield, temp);
+  minefield.push(mine);
+}
+
+console.log(minefield);
