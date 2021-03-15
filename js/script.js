@@ -30,25 +30,40 @@ function comparisonBoolean(arr,num) {
       return false;
     }
   }
-  return false;
+  return true;
 }
 
 function mineGame(mines) {
-
+  var counter;
   var userNum;
-  var boolean;
+  var boolean1;
+  var boolean2;
   var numbers = [];
 
-  for (var i = 0; i < mines.length; i++) {
+  for (var i = 0; i < 84; i++) {
+    counter = i + 1;
     userNum = parseInt(prompt('attenzione ai numeri che scegli'));
-    for
+    boolean1 = comparisonBoolean(numbers, userNum);
+    boolean2 = comparisonBoolean(mines, userNum);
+    if (boolean1) {
+      numbers.push(userNum);
+    } else {
+      alert('hai già usato questo numero');
+      --i;
+    }
+
+    if (boolean2) {
+      return 'hai preso una mina, punteggio totale: ' + counter + ' bombe = ' + mines;
+    }
   }
+  return 'hai vinto con il punteggio massimo, bombe =';
 }
 
 // zona variabili e input
 
 var minefield = [];
 var temp;
+var result = mineGame(minefield);
 
 
 
@@ -64,3 +79,4 @@ for (var i = 0; i < 16; i++) {
 
 // output
 console.log(minefield);
+console.log(result);
