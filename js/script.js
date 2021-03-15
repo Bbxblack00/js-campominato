@@ -24,11 +24,31 @@ function comparison(arr, num) {
   return num;
 }
 
-// zona variabili
+function comparisonBoolean(arr,num) {
+  for (var i = 0; i < arr.length; i++) {
+    if (num == arr[i]) {
+      return false;
+    }
+  }
+  return false;
+}
+
+function mineGame(mines) {
+
+  var userNum;
+  var boolean;
+  var numbers = [];
+
+  for (var i = 0; i < mines.length; i++) {
+    userNum = parseInt(prompt('attenzione ai numeri che scegli'));
+    for
+  }
+}
+
+// zona variabili e input
 
 var minefield = [];
 var temp;
-
 
 
 
@@ -40,4 +60,7 @@ for (var i = 0; i < 16; i++) {
   minefield.push(mine);
 }
 
+
+
+// output
 console.log(minefield);
