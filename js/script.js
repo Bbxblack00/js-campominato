@@ -24,13 +24,13 @@ function comparison(arr, num) {
   return num;
 }
 
-function comparisonBoolean(arr,num) {
-  for (var i = 0; i < arr.length; i++) {
-    if (num == arr[i]) {
-      return false;
-    }
-  }
-  return true;
+function comparisonBoolean(arr, num) {
+
+  var result = arr.include(num);
+
+  console.log(result);
+
+  return result;
 }
 
 function mineGame(mines) {
@@ -53,7 +53,7 @@ function mineGame(mines) {
     }
 
     if (boolean2) {
-      return 'hai preso una mina, punteggio totale: ' + counter + ' bombe = ' + mines;
+      return 'hai preso una mina, punteggio totale: ' + counter + 'bombe = ' + mines;
     }
   }
   return 'hai vinto con il punteggio massimo, bombe =';
