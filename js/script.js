@@ -24,18 +24,6 @@ function comparison(arr, num) {
   return num;
 }
 
-// function comparisonBoolean(arr, num) {
-//
-//   if (arr.length == 0) {
-//     return true;
-//   }else {
-//
-//
-//     return result;
-//   }
-//
-// }
-
 function mineGame(mines) {
   var counter;
   var userNum;
