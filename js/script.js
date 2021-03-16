@@ -28,9 +28,9 @@ function comparisonBoolean(arr, num) {
 
   var result = arr.include(num);
 
-  console.log(result);
+  console.log();
 
-  return result;
+  return arr.include(num);
 }
 
 function mineGame(mines) {
