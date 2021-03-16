@@ -45,14 +45,14 @@ function mineGame(mines) {
 
   for (var i = 0; i < 17; i++) {
     counter = i + 1;
-    userNum = parseInt(prompt('attenzione ai numeri che scegli'));
+    userNum = parseInt(prompt('inserisci un numero da 1 a 100'));
     boolean1 = numbers.includes(userNum);
     boolean2 = mines.includes(userNum);
-    if (!boolean1) {
-      numbers.push(userNum);
-    } else {
-      alert('hai già usato questo numero');
+    if (boolean1) {
+      console.log('hai già inserito questo numero');;
       --i;
+    } else {
+      numbers.push(userNum);
     }
 
     if (boolean2) {
