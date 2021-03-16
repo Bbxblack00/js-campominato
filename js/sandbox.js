@@ -9,28 +9,34 @@
 // }
 
 
-// collaudo funzione comparison
+// collaudo funzione comparison (funziona nel modo corretto)
 
-// function comparison(arr, num) {
-//   for (var i = 0; i < arr.length; i++) {
-//     while (arr[i] == num) {
-//       num = randomNum();
-//     }
+// function comparisonBoolean(arr, num) {
+//
+//   if (arr.length == 0) {
+//     return true;
+//   }else {
+//     var result = arr.includes(num);
+//
+//     return result;
 //   }
-//   return num;
+//
 // }
 
-function comparisonBoolean(arr, num) {
 
-  if (arr.length == 0) {
-    return true;
-  }else {
-    var result = arr.includes(num);
+// collaudo funzione mineGame
 
-    return result;
+function mineGame(mines) {
+
+  for (var i = 0; i < array.length; i++) {
+    array[i]
   }
 
 }
+
+
+
+
 
 
 var array = [1];
@@ -38,6 +44,6 @@ var numero = 7;
 
 
 
-var result = comparisonBoolean(array, numero);
+var result = mineGame();
 
 console.log(result);

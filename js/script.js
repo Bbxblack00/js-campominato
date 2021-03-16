@@ -24,17 +24,17 @@ function comparison(arr, num) {
   return num;
 }
 
-function comparisonBoolean(arr, num) {
-
-  if (arr.length = 0) {
-    return true;
-  }else {
-    var result = arr.includes(num);
-
-    return result;
-  }
-
-}
+// function comparisonBoolean(arr, num) {
+//
+//   if (arr.length == 0) {
+//     return true;
+//   }else {
+//
+//
+//     return result;
+//   }
+//
+// }
 
 function mineGame(mines) {
   var counter;
@@ -46,9 +46,9 @@ function mineGame(mines) {
   for (var i = 0; i < 17; i++) {
     counter = i + 1;
     userNum = parseInt(prompt('attenzione ai numeri che scegli'));
-    boolean1 = comparisonBoolean(numbers, userNum);
-    boolean2 = comparisonBoolean(mines, userNum);
-    if (boolean1) {
+    boolean1 = numbers.includes(userNum);
+    boolean2 = mines.includes(userNum);
+    if (!boolean1) {
       numbers.push(userNum);
     } else {
       alert('hai già usato questo numero');
@@ -59,7 +59,7 @@ function mineGame(mines) {
       return 'hai preso una mina, punteggio totale: ' + counter + 'bombe = ' + mines;
     }
   }
-  return 'hai vinto con il punteggio massimo, bombe =';
+  return 'hai vinto con il punteggio massimo, bombe =' + mines;
 }
 
 // zona variabali e input
