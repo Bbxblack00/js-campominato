@@ -48,7 +48,7 @@ function mineGame(mines) {
     userNum = parseInt(prompt('attenzione ai numeri che scegli'));
     boolean1 = comparisonBoolean(numbers, userNum);
     boolean2 = comparisonBoolean(mines, userNum);
-    if (!boolean1) {
+    if (boolean1) {
       numbers.push(userNum);
     } else {
       alert('hai già usato questo numero');
