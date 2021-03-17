@@ -54,7 +54,7 @@ function mineGame(mines) {
 
 var minefield = [];
 var temp;
-var result = mineGame(minefield);
+
 
 
 
@@ -66,8 +66,8 @@ for (var i = 0; i < 16; i++) {
   minefield.push(mine);
 }
 
-
+var result = mineGame(minefield);
 
 // output
-console.log(minefield);
+document.getElementById('tit1').innerHTML = result;
 console.log(result);
