@@ -31,7 +31,7 @@ function mineGame(mines) {
   var boolean2;
   var numbers = [];
 
-  for (var i = 0; i < 17; i++) {
+  for (var i = 0; i < 84; i++) {
     counter = i + 1;
     userNum = parseInt(prompt('inserisci un numero da 1 a 100'));
     boolean1 = numbers.includes(userNum);
